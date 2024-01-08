@@ -43,8 +43,8 @@ public class EstruturaEstatica<T> {
     }
 
     protected void adicionar(T elemento, int indice){
-        if(!(indice >=0 && indice < tamanho)){
-            throw new IllegalArgumentException("Posição inválida!");
+        if (indice < 0 || indice > tamanho){
+            throw new IllegalArgumentException("Posição inválida");
         }
 
         aumentaCapacidade();
